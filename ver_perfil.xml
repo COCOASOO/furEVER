@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ver_perfil">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+
+
+        <RelativeLayout
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#1d866a"
+            >
+
+            <TextView
+                android:id="@+id/title_signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Perfil de usuario"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contenido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#EAEBD6"
+            android:layout_below="@id/header2">
+
+            <ImageButton
+                android:id="@+id/fotoperfil"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="145dp"
+                android:layout_marginTop="70dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/border"
+                android:maxWidth="140dp"
+                android:maxHeight="140dp"
+                android:paddingHorizontal="10dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/user"
+                />
+
+            <EditText
+                android:id="@+id/ouput_nombre"
+                android:layout_width="265dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/fotoperfil"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:fontFamily="@font/quicksand_bold"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:textColorHint="@color/white"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ouput_email"
+                android:layout_width="265dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/ouput_nombre"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textAlignment="center"
+                android:textColorHint="@color/white"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/ouput_password"
+                android:layout_width="265dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/ouput_email"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:fontFamily="@font/quicksand_bold"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textAlignment="center"
+                android:textColorHint="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/bEditarPerfil"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/ouput_password"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/border_button"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Editar" />
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

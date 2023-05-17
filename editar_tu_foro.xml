@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".crear_foro">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#1a7b7f">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:adjustViewBounds="true"
+                android:background="#00000000"
+                android:maxWidth="30dp"
+                android:maxHeight="30dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/back" />
+
+            <TextView
+                android:id="@+id/main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@+id/back"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="FurEVER"
+                android:textColor="#FFFFFF"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#1d866a"
+            android:layout_below="@id/header">
+
+            <TextView
+                android:id="@+id/title_crear_marcador"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Editar foro"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contenido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eaebd6"
+            android:layout_below="@id/header2"/>
+
+        <EditText
+            android:id="@+id/input_autor"
+            android:layout_width="280dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/header2"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/quicksand_bold"
+            android:hint="Autor"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColorHint="@color/white" />
+
+        <EditText
+            android:id="@+id/input_contenido"
+            android:layout_width="280dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/input_autor"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/quicksand_bold"
+            android:hint="contenido"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColorHint="@color/white" />
+
+        <TextView
+            android:id="@+id/spinner_ex"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/quicksand_bold"
+            android:layout_below="@+id/input_contenido"
+            android:text="Elige la categoria"
+            android:textColor="#1a7b7f"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="280dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/spinner_ex"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/border"
+            android:pointerIcon="arrow"
+            android:popupBackground="@drawable/border"
+            android:textAlignment="center"
+            android:textColor="@color/white" />
+
+        <EditText
+            android:id="@+id/input_titulo"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/spinner"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border"
+            android:ems="10"
+            android:fontFamily="@font/quicksand_bold"
+            android:hint="titulo"
+            android:layout_alignStart="@id/spinner"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:textColorHint="@color/white" />
+        <Button
+            android:id="@+id/button_aceptar"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/spinner"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/border_button"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Editar"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_alignEnd="@id/spinner"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mascotas_bar">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#eaebd6"
+        app:layout_constraintVertical_bias="0.5">
+
+
+
+        <RelativeLayout
+            android:layout_width="165.5dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="40dp">
+            <TextView
+                android:id="@+id/tam_perro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="24sp"
+                android:textColor="#1A7B7F"
+                android:text="Tamaño" />
+            <TextView
+                android:id="@+id/edad_perro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="25sp"
+                android:textColor="#1A7B7F"
+                android:layout_below="@id/tam_perro"
+                android:text="Edad" />
+
+            <TextView
+                android:id="@+id/Raza_perro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="24sp"
+                android:textColor="#1A7B7F"
+                android:layout_below="@id/edad_perro"
+                android:text="Peso" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/caja"
+            android:layout_width="245.5dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="165.5dp">
+
+            <Spinner
+                android:id="@+id/input_tamaño"
+                android:layout_width="200dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:pointerIcon="arrow"
+                android:popupBackground="@drawable/border"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/input_edad"
+                android:layout_width="200dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:hint="introducir"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:layout_below="@id/input_tamaño"
+                android:textColorHint="@color/white" />
+            <EditText
+                android:id="@+id/input_peso"
+                android:layout_width="200dp"
+                android:layout_height="24dp"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:hint="introducir"
+                android:inputType="numberDecimal"
+                android:textAlignment="center"
+                android:layout_below="@id/input_edad"
+                android:textColorHint="@color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/caja2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@id/caja">
+
+            <Button
+                android:id="@+id/bBuscar"
+                android:layout_width="190dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/border_button"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Buscar datos"
+                android:textColor="@color/white"
+                android:textSize="15dp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/caja3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/caja2"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/border_rec">
+
+                <RelativeLayout
+                    android:id="@+id/caja4"
+                    android:layout_width="185.5dp"
+                    android:layout_height="150dp"
+                    >
+
+                    <TextView
+                        android:id="@+id/var_cant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="80dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:text="Cantidad"
+                        android:textColor="#1A7B7F"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="225.5dp"
+                    android:layout_height="150dp"
+                    android:layout_marginLeft="185.5dp"
+
+                    >
+                    <TextView
+                        android:id="@+id/var_result"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="@font/quicksand_bold"
+                        android:textSize="25sp"
+                        android:textColor="#1A7B7F"
+                         />
+
+                </RelativeLayout>
+
+        </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/caja5"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/caja3"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/border_rec">
+
+
+           >
+            <RelativeLayout
+                android:id="@+id/caja6"
+                android:layout_width="185.5dp"
+                android:layout_height="150dp"
+
+                >
+
+                <TextView
+                    android:id="@+id/var_act"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="80dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="Actividad"
+                    android:textColor="#1A7B7F"
+                    android:textSize="25sp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="225.5dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="185.5dp"
+
+                >
+                <TextView
+                    android:id="@+id/act_resul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:textSize="25sp"
+                    android:textColor="#1A7B7F"
+                    android:text="1min" />
+
+            </RelativeLayout>
+
+    </RelativeLayout>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

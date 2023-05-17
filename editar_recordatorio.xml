@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#1a7b7f">
+
+            <ImageButton
+                android:id="@+id/backEditarRecordatorio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="25dp"
+                android:adjustViewBounds="true"
+                android:background="#00000000"
+                android:maxWidth="30dp"
+                android:maxHeight="30dp"
+                android:scaleType="fitCenter"
+                app:srcCompat="@drawable/back" />
+
+            <TextView
+                android:id="@+id/main_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="FurEVER"
+                android:textColor="#FFFFFF"
+                android:textSize="45sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/header2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#1d866a"
+            android:layout_below="@id/header">
+
+            <TextView
+                android:id="@+id/title_editar_recordatorio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Editar Recordatorio"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/contenido"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#eaebd6"
+            android:layout_below="@id/header2">
+            <EditText
+                android:id="@+id/input_nombreMa"
+                android:layout_width="265dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:hint="Nombre mascota"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/input_asunto"
+                android:layout_width="265dp"
+                android:layout_height="35dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/border"
+                android:layout_below="@id/input_nombreMa"
+                android:ems="10"
+                android:hint="Asunto"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/quicksand_bold"
+                android:textAlignment="center"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/input_fecha"
+                android:layout_width="265dp"
+                android:layout_height="35dp"
+                android:layout_below="@id/input_asunto"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:hint="Fecha"
+                android:inputType="textPersonName"
+                android:textAlignment="center"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColorHint="@color/white" />
+
+            <EditText
+                android:id="@+id/input_hora"
+                android:layout_width="265dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/input_fecha"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/border"
+                android:ems="10"
+                android:hint="Hora"
+                android:inputType="time"
+                android:textAlignment="center"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColorHint="@color/white" />
+
+            <TextView
+                android:id="@+id/spinner_ex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_hora"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:text="Elige el tipo"
+                android:textColor="#1a7b7f"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/input_tipo"
+                android:layout_width="265dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/spinner_ex"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:pointerIcon="arrow"
+                android:popupBackground="@drawable/border"
+                android:textAlignment="center"
+                android:textColor="@color/white" />
+            <TextView
+                android:id="@+id/spinner_ex2"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/quicksand_bold"
+                android:layout_below="@+id/input_tipo"
+                android:text="Elige la importancia"
+                android:textColor="#1a7b7f"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/input_importancia"
+                android:layout_width="265dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/spinner_ex2"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border"
+                android:pointerIcon="arrow"
+                android:textColor="@color/white"
+                android:popupBackground="@drawable/border"
+                android:textAlignment="center" />
+
+            <Button
+                android:id="@+id/button_crear"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:layout_below="@+id/input_importancia"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="60dp"
+                android:background="@drawable/border_button"
+                android:text="editar"
+                android:textAlignment="center"
+                android:fontFamily="@font/quicksand_bold"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

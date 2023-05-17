@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FurEVER"
+        android:usesCleartextTraffic="true"
+        android:enableOnBackInvokedCallback="true"
+        tools:targetApi="31">
+        <receiver android:name=".MyNotificationReceiver" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY" />
+
+        <activity
+            android:name=".mapa_interactivo"
+            android:exported="false"
+            android:label="@string/title_activity_maps" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".main_bar"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".infoFragment"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".editar_mascota"
+            android:exported="true"
+            android:parentActivityName=".infoFragment">
+        </activity>
+
+        <activity
+            android:name=".recorFragment"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".crear_recordatorio"
+            android:exported="true"
+            android:parentActivityName=".recorFragment">
+        </activity>
+
+        <activity
+            android:name=".editar_recordatorio"
+            android:exported="true"
+            android:parentActivityName=".recorFragment">
+        </activity>
+
+        <activity
+            android:name=".signin"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".mascotas_bar"
+            android:exported="true"
+            android:parentActivityName=".tus_mascotas">
+        </activity>
+
+        <activity
+            android:name=".editar_perfil"
+            android:exported="true"
+            android:parentActivityName=".ver_perfil" >
+        </activity>
+
+        <activity
+            android:name=".crear_foro"
+            android:exported="true"
+            android:parentActivityName=".foros">
+        </activity>
+
+        <activity
+            android:name=".ins_mascota"
+            android:exported="true"
+            android:parentActivityName=".tus_mascotas">
+        </activity>
+
+        <activity
+            android:name=".ver_perfil"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".foros"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".mis_foros"
+            android:exported="true"
+            android:parentActivityName=".foros">
+        </activity>
+
+        <activity
+            android:name=".dentro_foro"
+            android:exported="true"
+            android:parentActivityName=".foros">
+        </activity>
+
+        <activity
+            android:name=".login"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".tus_mascotas"
+            android:exported="true"
+            android:parentActivityName=".infoFragment">
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts"
+            />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="default_channel_id"/>
+    </application>
+
+
+</manifest>

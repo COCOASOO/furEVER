@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragmento_info"
+    tools:context=".infoFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#eaebd6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <RelativeLayout
+            android:layout_width="185.5dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="40dp">
+
+            <ImageView
+                android:id="@+id/imagen_perro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/border"
+                tools:srcCompat="@tools:sample/avatars" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/caja"
+            android:layout_width="225.5dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginLeft="185.5dp">
+
+            <TextView
+                android:id="@+id/nom_perro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="24sp"
+                android:layout_alignParentStart="true"
+                android:textColor="#1A7B7F"
+                />
+            <TextView
+                android:id="@+id/edad_perro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="120dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="25sp"
+                android:textColor="#1A7B7F"
+                android:text="Perro" />
+
+            <TextView
+                android:id="@+id/Raza_perro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="90dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="20sp"
+                android:textColor="#1A7B7F"
+                 />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/caja2"
+            android:layout_width="185.5dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/caja"
+            >
+
+            <TextView
+                android:id="@+id/sexo_perro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="25sp"
+                android:textColor="#1A7B7F"
+                android:text="Sexo" />
+            <TextView
+                android:id="@+id/sexo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="20sp"
+                android:textColor="#1A7B7F"
+                />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="225.5dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="185.5dp"
+            android:layout_below="@id/caja"
+            >
+            <TextView
+                android:id="@+id/Esteril_perro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="25sp"
+                android:textColor="#1A7B7F"
+                android:text="Esterilizado" />
+            <TextView
+                android:id="@+id/Esteril"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="20sp"
+                android:textColor="#1A7B7F"
+                 />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/caja3"
+            android:layout_width="185.5dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/caja2"
+            >
+
+            <TextView
+                android:id="@+id/naci_perro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="25sp"
+                android:textColor="#1A7B7F"
+                android:text="Nacimiento" />
+            <TextView
+                android:id="@+id/naci"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="20sp"
+                android:textColor="#1A7B7F"
+                 />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="225.5dp"
+            android:layout_height="150dp"
+            android:layout_marginLeft="185.5dp"
+            android:layout_below="@id/caja2"
+            >
+            <TextView
+                android:id="@+id/peso_perro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="25sp"
+                android:textColor="#1A7B7F"
+                android:text="Peso" />
+            <TextView
+                android:id="@+id/peso"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="80dp"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="20sp"
+                android:textColor="#1A7B7F"
+                 />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bEditarMascota"
+            android:layout_width="150dp"
+            android:layout_height="35dp"
+            android:layout_below="@+id/caja3"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/border_button"
+            android:fontFamily="@font/quicksand_bold"
+            android:text="Editar"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
